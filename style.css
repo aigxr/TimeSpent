@@ -1,0 +1,401 @@
+@font-face {
+    font-family: rubik;
+    src: url(Rubik/Rubik-VariableFont_wght.ttf);
+}
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --light-red: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: rubik;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    z-index: 1;
+}
+
+.main-profile {
+    background-color: var(--dark-blue);
+    width: 200px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 300px;
+}
+
+.profile p {
+    font-size: 10px;
+    color: var(--pale-blue);
+}
+
+.profile h1 {
+    font-weight: 200;
+    color: white;
+}
+
+.jeremy {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.days {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 1.5rem;
+    color: var(--desaturated-blue);
+    font-size: 13px;
+}
+
+.days p:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    z-index: 5;
+}
+
+.main {
+    position: relative;
+    width: 200px;
+    height: 190px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: -2;
+}
+
+.work {
+    background-color: var(--light-red);
+}
+
+.play {
+    background-color: var(--soft-blue);
+}
+
+.study {
+    background-color: var(--light-red-study);
+}
+
+.exercise {
+    background-color: var(--lime-green);
+}
+
+.social {
+    background-color: var(--violet);
+}
+
+.care {
+    background-color: var(--soft-orange);
+}
+
+.contain {
+    background-color: var(--dark-blue);
+    display: flex;
+    height: 160px;
+    width: 202px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 17%;
+    margin: -1px;
+    border-radius: 10px;
+    padding: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.contain:hover {
+    background-color: var(--desaturated-blue);
+}
+
+.contain .header {
+    color: white;
+    font-size: 15px;
+}
+
+.contain p {
+    color: var(--pale-blue);
+    font-size: 10px;
+}
+
+.contain h1 {
+    color: white;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ellipsis {
+    cursor: pointer;
+}
+
+.ellipsis:hover {
+    color: white;
+}
+
+.image-class {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.image {
+    display: flex;
+    justify-content: end;
+    width: 60px;
+    margin-right: 1rem;
+    -webkit-mask-image: -webkit-linear-gradient(top, transparent 10%, transparent 0%, black 100%);
+}
+
+#weekly {
+    display: none;
+}
+#monthly {
+    display: none;
+}
+
+.clicked {
+    color: white;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 870px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contain {
+        height: 160px;
+        width: 101%;
+        margin: -1px;
+        margin-top: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        height: 650px;
+    }
+
+    .main-profile {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 150px;
+    }
+
+    .jeremy {
+        border: 3px solid white;
+        width: 75px;
+        height: 75px;
+    }
+
+    .days {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 0px;
+        font-size: 25px;
+        justify-content: space-around;
+    }
+
+    .profile p {
+        font-size: 17px;
+        color: var(--pale-blue);
+    }
+
+    .profile h1 {
+        font-weight: 200;
+        font-size: 25px;
+        color: white;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .inline .header {
+        font-size: 18px;
+    }
+
+    .image {
+        margin-right: -1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        height: 1300px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem;
+        padding-bottom: 4rem;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 140px;
+    }
+
+    .contain {
+        height: 160px;
+        width: 100.3%;
+        margin-top: 15px;
+    }
+
+    .main-profile {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 150px;
+    }
+
+    .jeremy {
+        border: 3px solid white;
+        width: 75px;
+        height: 75px;
+    }
+
+    .days {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 0px;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+    .profile {
+        display: flex;
+        gap: 30px;
+        background-color: var(--blue);
+        border-radius: 10px;
+        padding: 1.5rem;
+        height: 300px;
+    }
+
+    .profile p {
+        font-size: 17px;
+        color: var(--pale-blue);
+    }
+
+    .profile h1 {
+        font-weight: 200;
+        font-size: 25px;
+        color: white;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .inline .header {
+        font-size: 18px;
+    }
+}
