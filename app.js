@@ -4,6 +4,8 @@ const daily = document.querySelector(".daily")
 const weekly = document.querySelector(".weekly")
 const monthly = document.querySelector(".monthly")
 
+daily.style.color = "white"
+
 let dailyText = document.querySelectorAll("#daily")
 let weeklyText = document.querySelectorAll("#weekly")
 let monthlyText = document.querySelectorAll("#monthly")
@@ -26,6 +28,7 @@ weekly.addEventListener("click", function() {
     dailyText[i].style.display = "none"
     weeklyText[i].style.display = "block"
     monthlyText[i].style.display = "none"
+    daily.style.color = ""
 })
 }
 
@@ -34,5 +37,6 @@ monthly.addEventListener("click", function() {
     dailyText[i].style.display = "none"
     weeklyText[i].style.display = "none"
     monthlyText[i].style.display = "block"
+    daily.style.color = ""
 })
 }
